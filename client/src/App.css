@@ -1,20 +1,25 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
 
-.usr-inpt { position: relative; }
-.usr-inpt input { text-indent: 30px;}
-.usr-inpt .fa-user, .fa-lock { 
+.usr-inpt {
+  position: relative;
+}
+.usr-inpt input {
+  text-indent: 30px;
+}
+.usr-inpt .fa-user,
+.fa-lock {
   position: absolute;
   top: 43px;
   left: 10px;
   font-size: 15px;
 }
 
-.navbar{
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+.navbar {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .box-shadow {
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 }
 
 .sign {
@@ -23,8 +28,9 @@
   background-color: white;
 }
 
-.box-shadow:hover, .box-shadow:focus {
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.16);
+.box-shadow:hover,
+.box-shadow:focus {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
 }
 
 button:focus {
@@ -102,4 +108,25 @@ button:focus {
 
 .news-card a:hover {
   text-decoration: none;
+}
+
+.med-card {
+  margin-top: 20px;
+  margin-left: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.med-card > * {
+  flex: 0 0 25%;
+}
+
+.search {
+  align-items: center;
+  text-align: center;
+  margin-top: 1px;
+}
+
+.search button:hover {
+  background-color: rgb(197, 197, 197);
+  transition: 0.3s;
 }

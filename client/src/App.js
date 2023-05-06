@@ -29,7 +29,7 @@ export default function App() {
           {" "}
           <Landing />{" "}
         </Route>
-        <Route exact path="/medical">
+        <Route exact path="/drugs">
           {" "}
           <Medical />{" "}
         </Route>

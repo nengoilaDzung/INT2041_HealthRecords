@@ -67,9 +67,11 @@ export default function navBar() {
               Home
             </Link>
           </li>
-          <li className={pathname === "/medical" ? "nav-item active" : "nav-item"}>
-            <Link to="/medical" className={"nav-link"}>
-              Medical
+          <li
+            className={pathname === "/drugs" ? "nav-item active" : "nav-item"}
+          >
+            <Link to="/drugs" className={"nav-link"}>
+              Drugs
             </Link>
           </li>
           <li className={pathname === "/news" ? "nav-item active" : "nav-item"}>
