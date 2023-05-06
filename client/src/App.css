@@ -78,3 +78,28 @@ button:focus {
     color: #d9534f !important;
   }
 }
+
+.news-card {
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.news-card-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.news-card-row {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.news-card-row:hover {
+  background-color: rgb(228, 228, 228);
+  transition: 0.3s;
+}
+
+.news-card a:hover {
+  text-decoration: none;
+}

@@ -1,42 +1,64 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Patients from "./pages/Patients";
 import EHR from "./pages/EHR";
-import Contacts from './pages/Contacts';
-import NavBar from './components/Navbar';
-import ProtectedRoute from './ProtectedRoute';
-import PatientContext from './utils/PatientContext';
-import './assets/css/bootstrap.min.css';
+import Contacts from "./pages/Contacts";
+import NavBar from "./components/Navbar";
+import ProtectedRoute from "./ProtectedRoute";
+import PatientContext from "./utils/PatientContext";
+import "./assets/css/bootstrap.min.css";
 import "./App.css";
-
+import Medical from "./components/MedicalAPI/Medical";
+import { News } from "./components/MedicalAPI";
 
 export default function App() {
-  
-  const [ patient, setPatient ] = useState({}),
+  const [patient, setPatient] = useState({}),
     { Provider } = PatientContext,
-
-  setPatientContext = patient => setPatient(patient);
+    setPatientContext = (patient) => setPatient(patient);
 
   return (
     <Router>
-      <Provider value={patient} >
-        <Route path="/"><NavBar /> </Route>
-        <Route exact path="/"> <Landing /> </Route>
-        <Route exact path="/signin"> <SignIn /> </Route>
-        <Route exact path="/signup"> <SignUp /> </Route>
-        <ProtectedRoute exact path="/patients" 
-        component={Patients} 
-        setContext={setPatientContext}  
-        /> 
-        <ProtectedRoute exact path="/ehr" 
-        component={EHR} 
-        setContext={setPatientContext}
+      <Provider value={patient}>
+        <Route path="/">
+          <NavBar />{" "}
+        </Route>
+        <Route exact path="/">
+          {" "}
+          <Landing />{" "}
+        </Route>
+        <Route exact path="/medical">
+          {" "}
+          <Medical />{" "}
+        </Route>
+        <Route exact path="/news">
+          {" "}
+          <News />{" "}
+        </Route>
+        <Route exact path="/signin">
+          {" "}
+          <SignIn />{" "}
+        </Route>
+        <Route exact path="/signup">
+          {" "}
+          <SignUp />{" "}
+        </Route>
+        <ProtectedRoute
+          exact
+          path="/patients"
+          component={Patients}
+          setContext={setPatientContext}
+        />
+        <ProtectedRoute
+          exact
+          path="/ehr"
+          component={EHR}
+          setContext={setPatientContext}
         />
         <ProtectedRoute exact path="/contacts" component={Contacts} />
       </Provider>
     </Router>
-  )
+  );
 }
