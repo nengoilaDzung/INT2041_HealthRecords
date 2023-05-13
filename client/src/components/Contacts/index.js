@@ -183,15 +183,7 @@ export function Contacts({
                     onChange={target(i)}
                   />
                 </Col>
-                <Col size={"md-2"} classes={"form-group"}>
-                  <label>Ext.</label>
-                  <Input
-                    value={contact.primaryExt}
-                    name="primaryExt"
-                    style={input}
-                    onChange={target(i)}
-                  />
-                </Col>
+                
                 <Col size={"md-4"} classes={"form-group"}>
                   <label>Another Phone</label>
                   <Input
@@ -201,15 +193,7 @@ export function Contacts({
                     onChange={target(i)}
                   />
                 </Col>
-                <Col size={"md-2"} classes={"form-group"}>
-                  <label>Ext.</label>
-                  <Input
-                    value={contact.secondaryExt}
-                    name="secondaryExt"
-                    style={input}
-                    onChange={target(i)}
-                  />
-                </Col>
+                
               </div>
               <div className="form-row">
                 <Col size={"md-4"} classes={"form-group"}>
@@ -320,20 +304,14 @@ export function Contacts({
                   <a href={`tel:${formatPhoneNumberLink(contact.primaryPhone)}`}>{contact.primaryPhone}</a>
                   </div>
                 </Col>
-                <Col size={"md-2"} classes={"form-group"}>
-                  <label>Ext:</label>
-                  <div style={fieldText}>{contact.primaryExt}</div>
-                </Col>
+               
                 <Col size={"md-4"} classes={"form-group"}>
                   <label>Another Phone:</label>
                   <div style={{...fieldText, textDecoration: 'underline'}}>
                   <a href={`tel:${formatPhoneNumberLink(contact.secondaryPhone)}`}>{contact.secondaryPhone}</a>
                   </div>
                 </Col>
-                <Col size={"md-2"} classes={"form-group"}>
-                  <label>Ext:</label>
-                  <div style={fieldText}>{contact.secondaryExt}</div>
-                </Col>
+                
               </div>
               <div className="form-row">
                 <Col size={"md-4"} classes={"form-group"}>
