@@ -91,13 +91,7 @@ export function NewContact({ target, toggleState, formSubmit }) {
                     onChange={target} 
                     />
                 </Col>
-                <Col size={'md-2'} classes={'form-group'}>
-                    <label>Ext.</label>
-                    <Input name="primaryExt"
-                    style={input}
-                    onChange={target} 
-                    />
-                </Col>
+               
                 <Col size={'md-4'} classes={'form-group'}>
                     <label>Another Phone</label>
                     <Input name="secondaryPhone"
@@ -105,13 +99,7 @@ export function NewContact({ target, toggleState, formSubmit }) {
                     onChange={target} 
                     />
                 </Col>
-                <Col size={'md-2'} classes={'form-group'}>
-                    <label>Ext.</label>
-                    <Input name="secondaryExt"
-                    style={input}
-                    onChange={target} 
-                    />
-                </Col>
+               
                 </div>
                 <div className="form-row">
                 <Col size={'md-4'} classes={'form-group'}>

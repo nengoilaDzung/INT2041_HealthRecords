@@ -59,8 +59,12 @@ const Medical = () => {
         <div className="med-card">
           {medicines &&
             medicines.slice(0, randomNumber(10, 30)).map((med, index) => (
-              <div key={index}>
-                <a href={med.detailsUrl} target="_blank">
+              <div key={index} className="med-name">
+                <a
+                  href={med.detailsUrl}
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
                   <h4>{med.medicineName}</h4>
                   <img
                     src={med.medicineImage}
